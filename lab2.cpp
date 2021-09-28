@@ -12,12 +12,22 @@ int main()
 {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
-    hero h = AddHero(" ", 0, 0);
-    h = InputHero();
-    OutputHero(h);
-    enemy e = AddEnemy(" ", 0, 0);
-    e = InputEnemy();
-    OutputEnemy(e);
+
+
+
+    hero h = AddHero(" ", 0, 0); // Инициализируем героя
+    h = InputHero(); // Вводим характеристики героя
+    OutputHero(h); // Выводим характеристики героя
+
+
+
+    enemy e = AddEnemy(" ", 0, 0); // Инициализируем врага
+    e = InputEnemy(); // Вводим характеристики врага
+    OutputEnemy(e); // Выводим характеристики врага
+
+
+
+
     weapon w = AddWeapon("", 0, 0);
     w = InputWeapon();
     OutputWeapon(w);
