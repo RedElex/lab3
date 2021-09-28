@@ -3,6 +3,7 @@
 #include <windows.h>
 
 using namespace std;
+
 typedef struct
 {
 	string name;
