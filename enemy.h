@@ -1,8 +1,8 @@
 #pragma once
-struct enemy
+typedef struct
 {
 	char name[10];
 	int damage;
 	int hp;
-};
+} enemy;
 

@@ -1,8 +1,8 @@
 #pragma once
-class weapon
+typedef struct
 {
 	char name[10];
 	int damage;
 	int type;
-};
+} weapon;
 
