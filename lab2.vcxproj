@@ -139,7 +139,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="armor.cpp" />
+    <ClCompile Include="enemy.cpp" />
+    <ClCompile Include="hero.cpp" />
     <ClCompile Include="lab2.cpp" />
+    <ClCompile Include="shield.cpp" />
+    <ClCompile Include="weapon.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="armor.h" />
+    <ClInclude Include="enemy.h" />
+    <ClInclude Include="hero.h" />
+    <ClInclude Include="shield.h" />
+    <ClInclude Include="weapon.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

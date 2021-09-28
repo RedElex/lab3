@@ -1,11 +1,13 @@
 // lab2.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-
+#include <stdio.h>
 #include <iostream>
-
+#include <windows.h>
 int main()
 {
-    std::cout << "Hello World!\n";
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    std::cout << "Привет,мир!\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
