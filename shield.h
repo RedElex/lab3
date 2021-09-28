@@ -1,8 +1,16 @@
 #pragma once
+#include <string>
+#include <windows.h>
+
+using namespace std;
+
 typedef struct
 {
-	char name[10];
+	string name;
 	int protection;
 	int type;
 } shield;
 
+shield AddShield(string a, int b, int c); // Инициализация щита
+shield InputShield(); // Ввод щита
+void OutputShield (shield b); // Вывод щита
