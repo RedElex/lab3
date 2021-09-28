@@ -73,5 +73,19 @@ int main()
     armor ar = AddArmor("", 0, 0);
     ar = InputArmor();
     OutputArmor(ar);
+
+    switch (Fight(h, e, w[ChoiceWeapon], all_shield[ChoiceShield], ar))
+    {
+    case 0:
+        cout << "Ничья" << endl;
+        break;
+    case 1:
+        cout << "Поражение" << endl;
+        break;
+    case 2:
+        cout << "Победа" << endl;
+        break;
+    }
+
     
 }

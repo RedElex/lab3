@@ -1,4 +1,7 @@
-
+#include "enemy.h"
+#include "weapon.h"
+#include "armor.h"
+#include "shield.h"
 #include "hero.h"
 #include <iostream>
 #include <stdio.h>
@@ -35,4 +38,27 @@ void OutputHero(hero b)/*функци€ вывода переменной*/
 	cout << b.strength << endl;
 	cout << "’п: ";
 	cout << b.hp << endl;
+}
+int Fight(hero a, enemy b, weapon c, shield d, armor e)
+{
+	int loss = b.damage - d.protection - e.protection;
+	int attack = a.strength * c.damage;
+	int hp_hero = a.hp;
+	int hp_enemy = b.hp;
+	int result;
+	do
+	{
+		if (loss > 0)
+			hp_hero = hp_hero - loss;
+		hp_enemy = hp_enemy - attack;
+
+	} while (hp_hero<1||hp_enemy<1);
+
+	if (hp_hero < 1)//победа врага
+		result = 1;
+	if (hp_enemy < 1)//победа геро€
+		result = 2;
+	if (hp_hero < 1 && hp_enemy < 1)//ничь€
+		result = 0;
+	return result;
 }
