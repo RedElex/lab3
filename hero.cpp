@@ -19,7 +19,7 @@ hero AddHero(string a, int b, int c) //Инициализируем героя
 	h.hp = c;
 	return h;
 }
-hero InputHero()
+hero InputHero() // Ввод переменной
 {
 	hero a = {};
 	cout << "Выберите имя героя: " << endl;
@@ -39,26 +39,19 @@ void OutputHero(hero b)/*функция вывода переменной*/
 	cout << "Хп: ";
 	cout << b.hp << endl;
 }
-int Fight(hero a, enemy b, weapon c, shield d, armor e)
+int Fight(hero a, enemy b, weapon c, shield d, armor e) // Функция сражения
 {
 	int result;
 	int loss = b.damage - d.protection - e.protection;
 	int attack = a.strength * c.damage;
 	int hp_hero = a.hp;
 	int hp_enemy = b.hp;
-	cout << "hp_hero" << hp_hero << endl;
-	cout << "hp_enemy" << hp_enemy << endl;
-	cout << "loss" << loss << endl;
-	cout << "attack" << attack << endl;
 	do
 	{
 		if (loss > 0)
 			hp_hero = hp_hero - loss;
 		hp_enemy = hp_enemy - attack;
-		cout << "hp_hero" << hp_hero << "hp_enemy" << hp_enemy << endl;
-
 	} while (hp_hero>0&&hp_enemy>0);
-
 	if (hp_hero < 1)//победа врага
 		result = 1;
 	if (hp_enemy < 1)//победа героя

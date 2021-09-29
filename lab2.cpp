@@ -67,21 +67,12 @@ int main()
 
     } while (ChoiceShield <0 || ChoiceShield>(2-1));
 
-    armor ar = AddArmor("", 0, 0);
-    ar = InputArmor();
-    OutputArmor(ar);
-
-    cout << "Щит" << ChoiceShield << endl;
-    cout << "Меч" << ChoiceWeapon << endl;
+    armor ar = AddArmor("", 0, 0); // Инициализируем броню
+    ar = InputArmor(); // Вводим броню
+    OutputArmor(ar); // Выводим броню
 
     int res = 0;
-
-
-    cout << res << endl;
-
-    res = Fight(h, e, w[ChoiceWeapon], all_shield[ChoiceShield], ar);
-    cout << res << endl;
-
+    res = Fight(h, e, w[ChoiceWeapon], all_shield[ChoiceShield], ar); // Сражение
 
     switch (res)
     {
