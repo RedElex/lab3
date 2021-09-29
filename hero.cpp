@@ -41,18 +41,23 @@ void OutputHero(hero b)/*функция вывода переменной*/
 }
 int Fight(hero a, enemy b, weapon c, shield d, armor e)
 {
+	int result;
 	int loss = b.damage - d.protection - e.protection;
 	int attack = a.strength * c.damage;
 	int hp_hero = a.hp;
 	int hp_enemy = b.hp;
-	int result;
+	cout << "hp_hero" << hp_hero << endl;
+	cout << "hp_enemy" << hp_enemy << endl;
+	cout << "loss" << loss << endl;
+	cout << "attack" << attack << endl;
 	do
 	{
 		if (loss > 0)
 			hp_hero = hp_hero - loss;
 		hp_enemy = hp_enemy - attack;
+		cout << "hp_hero" << hp_hero << "hp_enemy" << hp_enemy << endl;
 
-	} while (hp_hero<1||hp_enemy<1);
+	} while (hp_hero>0&&hp_enemy>0);
 
 	if (hp_hero < 1)//победа врага
 		result = 1;

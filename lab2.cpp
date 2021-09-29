@@ -36,7 +36,7 @@ int main()
     cout << "Выберете оружие" << endl;
     for (int i = 0; i < k; i++)
     {
-        cout << i+1 << ")" << endl;
+        cout << i << ")" << endl;
         OutputWeapon(w[i]);
     }
 
@@ -45,18 +45,18 @@ int main()
     {
         cin >> ChoiceWeapon;
 
-    } while (ChoiceWeapon<1||ChoiceWeapon>k);
+    } while (ChoiceWeapon<0||ChoiceWeapon>k);
 
-    shield all_shield[3];//Статический массив щитов
-    for (int i = 0; i < 3; i++)
+    shield all_shield[2];//Статический массив щитов
+    for (int i = 0; i < 2; i++)
     {
         all_shield[i] = AddShield("", 0, 0);
         all_shield[i] = InputShield();
     }
     cout << "Выберете щит" << endl;
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 2; i++)
     {
-        cout << i + 1 << ")" << endl;
+        cout << i << ")" << endl;
         OutputShield(all_shield[i]);
     }
 
@@ -65,16 +65,25 @@ int main()
     {
         cin >> ChoiceShield;
 
-    } while (ChoiceShield <1 || ChoiceShield>k);
-    //shield s = AddShield("", 0, 0);
-    //s = InputShield();
-    //OutputShield(s);
+    } while (ChoiceShield <0 || ChoiceShield>(2-1));
 
     armor ar = AddArmor("", 0, 0);
     ar = InputArmor();
     OutputArmor(ar);
 
-    switch (Fight(h, e, w[ChoiceWeapon], all_shield[ChoiceShield], ar))
+    cout << "Щит" << ChoiceShield << endl;
+    cout << "Меч" << ChoiceWeapon << endl;
+
+    int res = 0;
+
+
+    cout << res << endl;
+
+    res = Fight(h, e, w[ChoiceWeapon], all_shield[ChoiceShield], ar);
+    cout << res << endl;
+
+
+    switch (res)
     {
     case 0:
         cout << "Ничья" << endl;
@@ -86,6 +95,4 @@ int main()
         cout << "Победа" << endl;
         break;
     }
-
-    
 }
