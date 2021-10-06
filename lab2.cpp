@@ -12,10 +12,6 @@ int main()
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
 
-    hero h = AddHero(" ", 0, 0); // Инициализируем героя
-    h = InputHero(); // Вводим характеристики героя
-    OutputHero(h); // Выводим характеристики героя
-
     enemy e = AddEnemy(" ", 0, 0); // Инициализируем врага
     e = InputEnemy(); // Вводим характеристики врага
     OutputEnemy(e); // Выводим характеристики врага
@@ -71,8 +67,12 @@ int main()
     ar = InputArmor(); // Вводим броню
     OutputArmor(ar); // Выводим броню
 
+    hero h = AddHero(" ", 0, 0); // Инициализируем героя
+    h = InputHero(&ar, &w[ChoiceWeapon], &all_shield[ChoiceShield]); // Вводим характеристики героя
+    OutputHero(h); // Выводим характеристики героя
+
     int res = 0;
-    res = Fight(h, e, w[ChoiceWeapon], all_shield[ChoiceShield], ar); // Сражение
+    res = Fight(h, e); // Сражение
 
     switch (res)
     {

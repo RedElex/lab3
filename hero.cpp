@@ -14,14 +14,20 @@ using namespace std;
 hero AddHero(string a, int b, int c) //Инициализируем героя
 {
 	hero h;
+	h.my_armor = {};
+	h.my_shield = {};
+	h.my_weapon = {};
 	h.name = a;
 	h.strength = b;
 	h.hp = c;
 	return h;
 }
-hero InputHero() // Ввод переменной
+hero InputHero(armor* b, weapon* c, shield* d) // Ввод переменной
 {
 	hero a = {};
+	a.my_armor = *b;
+	a.my_weapon = *c;
+	a.my_shield = *d;
 	cout << "Выберите имя героя: " << endl;
 	cin >> a.name;
 	cout << "Введите силу героя: " << endl;
@@ -38,12 +44,15 @@ void OutputHero(hero b)/*функция вывода переменной*/
 	cout << b.strength << endl;
 	cout << "Хп: ";
 	cout << b.hp << endl;
+	cout << "Защита: ";
+	cout << b.my_armor.protection+b.my_shield.protection << endl;
 }
-int Fight(hero a, enemy b, weapon c, shield d, armor e) // Функция сражения
+
+int Fight(hero a, enemy b) // Функция сражения
 {
 	int result;
-	int loss = b.damage - d.protection - e.protection;
-	int attack = a.strength * c.damage;
+	int loss = b.damage - a.my_armor.protection - a.my_shield.protection;
+	int attack = a.strength * a.my_weapon.damage;
 	int hp_hero = a.hp;
 	int hp_enemy = b.hp;
 	do
