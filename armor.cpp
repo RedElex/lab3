@@ -39,6 +39,12 @@ void Armor::getArmor(Armor armor)
 	cout << armor.type << endl;
 
 }
+
+int Armor::getProtectionArmor(Armor armor)
+{
+	int protection = armor.protection;
+	return protection;
+}
 /*
 armor InitArmor(string a, int b, int c) //Инициализация брони
 {

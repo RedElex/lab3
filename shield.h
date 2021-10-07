@@ -10,6 +10,7 @@ public:
 	Shield initializeShield(string name, int protection, int type);
 	Shield setShield();
 	void getShield(Shield shield);
+	int getProtectionShield(Shield shield);
 private:
 	string name;
 	int protection;

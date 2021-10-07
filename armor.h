@@ -10,6 +10,7 @@ public:
 	Armor initializeArmor(string name, int protection, int type);
 	Armor setArmor();
 	void getArmor(Armor armor);
+	int getProtectionArmor(Armor armor);
 private:
 	string name;
 	int protection;

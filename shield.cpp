@@ -38,6 +38,11 @@ void Shield::getShield(Shield shield)
 	cout << shield.type << endl;
 
 }
+int Shield::getProtectionShield(Shield shield)
+{
+	int protection = shield.protection;
+	return protection;
+}
 /*
 shield InitShield(string a, int b, int c) //Инициализация щита
 {

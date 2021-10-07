@@ -48,12 +48,40 @@ void Hero::getHero(Hero hero)
 	cout << "Хп: ";
 	cout << hero.hp << endl;
 	cout << "Защита: ";
-	cout << hero.armor. + hero.shield.protection << endl;
+	cout << getProtectionHero << endl;
 }
-int Armor::Shield::
+
+int Hero::getProtectionHero(Hero hero)
+{
+	Shield shield;
+	Armor armor;
+	shield = shield.setShield();
+	armor = armor.setArmor();
+	int protection;
+	protection = ;
+	return protection;
+}
+
 int Hero::Fight(Hero hero, Enemy enemy)
 {
-
+		int result;
+		int loss = enemy.setEnemy(). - a.my_armor.protection - a.my_shield.protection;
+		int attack = a.strength * a.my_weapon.damage;
+		int hp_hero = a.hp;
+		int hp_enemy = b.hp;
+		do
+		{
+			if (loss > 0)
+				hp_hero = hp_hero - loss;
+			hp_enemy = hp_enemy - attack;
+		} while (hp_hero > 0 && hp_enemy > 0);
+		if (hp_hero < 1)//победа врага
+			result = 1;
+		if (hp_enemy < 1)//победа героя
+			result = 2;
+		if (hp_hero < 1 && hp_enemy < 1)//ничья
+			result = 0;
+		return result;
 }
 
 hero InitHero(string a, int b, int c) //Инициализируем героя
