@@ -4,6 +4,20 @@
 
 using namespace std;
 
+class Weapon
+{
+public:
+	Weapon initializeWeapon(string name, int damage, int type);
+	Weapon setWeapon();
+	void getWeapon(Weapon weapon);
+private:
+	string name;
+	int damage;
+	int type;
+};
+
+
+/*
 typedef struct
 {
 	string name;
@@ -14,3 +28,4 @@ typedef struct
 weapon InitWeapon(string a, int b, int c); // Инициализация оружия
 weapon InputWeapon(); // Ввод оружия
 void OutputWeapon(weapon b); // Вывод оружия
+*/
