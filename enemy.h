@@ -10,6 +10,6 @@ typedef struct
 	int damage;
 	int hp;
 } enemy;
-enemy AddEnemy(string a, int b, int c); //Инициализация врага
+enemy InitEnemy(string a, int b, int c); //Инициализация врага
 enemy InputEnemy(); // Ввод врага
 void OutputEnemy(enemy b); // Вывод врага

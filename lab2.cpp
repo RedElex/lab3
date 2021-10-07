@@ -12,7 +12,7 @@ int main()
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
 
-    enemy e = AddEnemy(" ", 0, 0); // Инициализируем врага
+    enemy e = InitEnemy(" ", 0, 0); // Инициализируем врага
     e = InputEnemy(); // Вводим характеристики врага
     OutputEnemy(e); // Выводим характеристики врага
 
@@ -25,7 +25,7 @@ int main()
     weapon* w = new weapon[k]; //динамический массив оружия
     for (int i = 0; i < k; i++)
     {
-        w[i] = AddWeapon(" ", 0, 0);
+        w[i] = InitWeapon(" ", 0, 0);
         w[i] = InputWeapon();
     }
 
@@ -46,7 +46,7 @@ int main()
     shield all_shield[2];//Статический массив щитов
     for (int i = 0; i < 2; i++)
     {
-        all_shield[i] = AddShield("", 0, 0);
+        all_shield[i] = InitShield("", 0, 0);
         all_shield[i] = InputShield();
     }
     cout << "Выберете щит" << endl;
@@ -63,11 +63,11 @@ int main()
 
     } while (ChoiceShield <0 || ChoiceShield>(2-1));
 
-    armor ar = AddArmor("", 0, 0); // Инициализируем броню
+    armor ar = InitArmor("", 0, 0); // Инициализируем броню
     ar = InputArmor(); // Вводим броню
     OutputArmor(ar); // Выводим броню
 
-    hero h = AddHero(" ", 0, 0); // Инициализируем героя
+    hero h = InitHero(" ", 0, 0); // Инициализируем героя
     h = InputHero(&ar, &w[ChoiceWeapon], &all_shield[ChoiceShield]); // Вводим характеристики героя
     OutputHero(h); // Выводим характеристики героя
 

@@ -7,7 +7,7 @@
 
 using namespace std;
 
-weapon AddWeapon(string a, int b, int c) //Инициализация оружия
+weapon InitWeapon(string a, int b, int c) //Инициализация оружия
 {
 	weapon w;
 	w.name = a;

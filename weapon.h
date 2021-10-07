@@ -11,6 +11,6 @@ typedef struct
 	int type;
 } weapon;
 
-weapon AddWeapon(string a, int b, int c); // Инициализация оружия
+weapon InitWeapon(string a, int b, int c); // Инициализация оружия
 weapon InputWeapon(); // Ввод оружия
 void OutputWeapon(weapon b); // Вывод оружия

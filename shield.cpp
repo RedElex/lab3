@@ -7,7 +7,7 @@
 
 using namespace std;
 
-shield AddShield(string a, int b, int c) //Инициализация щита
+shield InitShield(string a, int b, int c) //Инициализация щита
 {
 	shield s;
 	s.name = a;

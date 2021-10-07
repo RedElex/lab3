@@ -7,7 +7,7 @@
 
 using namespace std;
 
-enemy AddEnemy(string a, int b, int c) //Инициализация врага
+enemy InitEnemy(string a, int b, int c) //Инициализация врага
 {
 	enemy e;
 	e.name = a;

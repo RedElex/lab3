@@ -11,6 +11,6 @@ typedef struct
 	int type;
 } shield;
 
-shield AddShield(string a, int b, int c); // Инициализация щита
+shield InitShield(string a, int b, int c); // Инициализация щита
 shield InputShield(); // Ввод щита
 void OutputShield (shield b); // Вывод щита

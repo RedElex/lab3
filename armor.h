@@ -11,6 +11,6 @@ typedef struct
 	int type;
 } armor;
 
-armor AddArmor(string a, int b, int c); // Инициализация брони
+armor InitArmor(string a, int b, int c); // Инициализация брони
 armor InputArmor(); // Ввод брони
 void OutputArmor(armor b); // Вывод брони

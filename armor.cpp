@@ -7,7 +7,7 @@
 
 using namespace std;
 
-armor AddArmor(string a, int b, int c) //Инициализация брони
+armor InitArmor(string a, int b, int c) //Инициализация брони
 {
 	armor ar;
 	ar.name = a;

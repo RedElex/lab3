@@ -11,7 +11,7 @@
 
 using namespace std;
 
-hero AddHero(string a, int b, int c) //Инициализируем героя
+hero InitHero(string a, int b, int c) //Инициализируем героя
 {
 	hero h;
 	h.my_armor = {};
