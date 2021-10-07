@@ -11,6 +11,51 @@
 
 using namespace std;
 
+Hero Hero::initializeHero(string name, int strength, int hp)
+{
+	Hero hero;
+	hero.armor = {};
+	hero.shield = {};
+	hero.weapon = {};
+	hero.name = name;
+	hero.strenght = strength;
+	hero.hp = hp;
+	return hero;
+
+}
+
+Hero Hero::setHero(Armor armor, Weapon weapon, Shield shield)
+{
+	Hero hero = {};
+	hero.armor = armor;
+	hero.weapon = weapon;
+	hero.shield = shield;
+	cout << "Выберите имя героя: " << endl;
+	cin >> hero.name;
+	cout << "Введите силу героя: " << endl;
+	cin >> hero.strength;
+	cout << "Введите хп героя: " << endl;
+	cin >> hero.hp;
+	return hero;
+}
+
+void Hero::getHero(Hero hero)
+{
+	cout << "Имя: ";
+	cout << hero.name << endl;
+	cout << "Сила: ";
+	cout << hero.strength << endl;
+	cout << "Хп: ";
+	cout << hero.hp << endl;
+	cout << "Защита: ";
+	cout << hero.armor. + hero.shield.protection << endl;
+}
+int Armor::Shield::
+int Hero::Fight(Hero hero, Enemy enemy)
+{
+
+}
+
 hero InitHero(string a, int b, int c) //Инициализируем героя
 {
 	hero h;

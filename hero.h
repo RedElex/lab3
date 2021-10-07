@@ -16,7 +16,7 @@ public:
 	int Fight(Hero hero, Enemy enemy);
 private:
 	string name;
-	int strenght;
+	int strength;
 	int hp;
 	Armor armor;
 	Weapon weapon;
