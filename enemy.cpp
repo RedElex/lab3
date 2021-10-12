@@ -16,7 +16,7 @@ Enemy Enemy::initializeEnemy(string name, int damage, int hp)
 	return enemy;
 }
 
-Enemy Enemy::setEnemy()
+Enemy Enemy::inputEnemy()
 {
 	Enemy enemy = {};
 	cout << "Выберите имя врага: " << endl;
@@ -29,7 +29,7 @@ Enemy Enemy::setEnemy()
 
 }
 
-void Enemy::getEnemy(Enemy enemy)
+void Enemy::outputEnemy(Enemy enemy)
 {
 	cout << "Имя: ";
 	cout << enemy.name << endl;
@@ -38,6 +38,17 @@ void Enemy::getEnemy(Enemy enemy)
 	cout << "Хп: ";
 	cout << enemy.hp << endl;
 
+}
+
+int Enemy::getDamage(Enemy enemy)
+{
+	int damage = enemy.damage;
+	return damage;
+}
+int Enemy::getHP(Enemy enemy)
+{
+	int hp = enemy.hp;
+	return hp;
 }
 /*
 enemy InitEnemy(string a, int b, int c) //Инициализация врага

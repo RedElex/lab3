@@ -8,8 +8,8 @@ class Shield
 {
 public:
 	Shield initializeShield(string name, int protection, int type);
-	Shield setShield();
-	void getShield(Shield shield);
+	Shield inputShield();
+	void outputShield(Shield shield);
 	int getProtectionShield(Shield shield);
 private:
 	string name;

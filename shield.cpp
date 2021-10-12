@@ -16,7 +16,7 @@ Shield Shield::initializeShield(string name, int protection, int type)
 	return shield;
 }
 
-Shield Shield::setShield()
+Shield Shield::inputShield()
 {
 	Shield shield = {};
 	cout << "Выберите название щита: " << endl;
@@ -28,7 +28,7 @@ Shield Shield::setShield()
 	return shield;
 }
 
-void Shield::getShield(Shield shield)
+void Shield::outputShield(Shield shield)
 {
 	cout << "Название: ";
 	cout << shield.name << endl;

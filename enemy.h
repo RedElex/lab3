@@ -8,8 +8,10 @@ class Enemy
 {
 public:
 	Enemy initializeEnemy(string name, int damage, int hp);
-	Enemy setEnemy();
-	void getEnemy(Enemy enemy);
+	Enemy inputEnemy();
+	void outputEnemy(Enemy enemy);
+	int getDamage(Enemy enemy);
+	int getHP(Enemy enemy);
 private:
 	string name;
 	int damage;

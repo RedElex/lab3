@@ -8,8 +8,9 @@ class Weapon
 {
 public:
 	Weapon initializeWeapon(string name, int damage, int type);
-	Weapon setWeapon();
-	void getWeapon(Weapon weapon);
+	Weapon inputWeapon();
+	void outputWeapon(Weapon weapon);
+	int getDamage(Weapon weapon);
 private:
 	string name;
 	int damage;

@@ -16,7 +16,7 @@ Armor Armor::initializeArmor(string name, int protection, int type)
 	return armor;
 }
 
-Armor Armor::setArmor()
+Armor Armor::inputArmor()
 {
 	Armor armor = {};
 	cout << "Выберите название брони: " << endl;
@@ -29,7 +29,7 @@ Armor Armor::setArmor()
 
 }
 
-void Armor::getArmor(Armor armor)
+void Armor::outputArmor(Armor armor)
 {
 	cout << "Название: ";
 	cout << armor.name << endl;

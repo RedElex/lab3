@@ -11,10 +11,9 @@ class Hero
 {
 public:
 	Hero initializeHero(string name, int strenght, int hp);
-	Hero setHero(Armor armor, Weapon weapon, Shield shield);
-	void getHero(Hero hero);
+	Hero inputHero(Armor armor, Weapon weapon, Shield shield);
+	void outputHero(Hero hero);
 	int Fight(Hero hero, Enemy enemy);
-	int getProtectionHero(Hero hero);
 private:
 	string name;
 	int strength;

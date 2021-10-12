@@ -16,7 +16,7 @@ Weapon Weapon::initializeWeapon(string name, int damage, int type)
 	return weapon;
 
 }
-Weapon Weapon::setWeapon()
+Weapon Weapon::inputWeapon()
 {
 	Weapon weapon = {};
 	cout << "Выберите название оружия: " << endl;
@@ -30,7 +30,7 @@ Weapon Weapon::setWeapon()
 	} while (weapon.type < 1 || weapon.type>3);
 	return weapon;
 }
-void Weapon::getWeapon(Weapon weapon)
+void Weapon::outputWeapon(Weapon weapon)
 {
 	cout << "Название: ";
 	cout << weapon.name << endl;
@@ -53,6 +53,11 @@ void Weapon::getWeapon(Weapon weapon)
 		break;
 	}
 
+}
+int Weapon::getDamage(Weapon weapon)
+{
+	int damage = weapon.damage;
+	return damage;
 }
 
 /*

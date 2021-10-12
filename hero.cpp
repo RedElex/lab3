@@ -18,13 +18,13 @@ Hero Hero::initializeHero(string name, int strength, int hp)
 	hero.shield = {};
 	hero.weapon = {};
 	hero.name = name;
-	hero.strenght = strength;
+	hero.strength = strength;
 	hero.hp = hp;
 	return hero;
 
 }
 
-Hero Hero::setHero(Armor armor, Weapon weapon, Shield shield)
+Hero Hero::inputHero(Armor armor, Weapon weapon, Shield shield)
 {
 	Hero hero = {};
 	hero.armor = armor;
@@ -39,7 +39,7 @@ Hero Hero::setHero(Armor armor, Weapon weapon, Shield shield)
 	return hero;
 }
 
-void Hero::getHero(Hero hero)
+void Hero::outputHero(Hero hero)
 {
 	cout << "Имя: ";
 	cout << hero.name << endl;
@@ -47,28 +47,15 @@ void Hero::getHero(Hero hero)
 	cout << hero.strength << endl;
 	cout << "Хп: ";
 	cout << hero.hp << endl;
-	cout << "Защита: ";
-	cout << getProtectionHero << endl;
-}
-
-int Hero::getProtectionHero(Hero hero)
-{
-	Shield shield;
-	Armor armor;
-	shield = shield.setShield();
-	armor = armor.setArmor();
-	int protection;
-	protection = ;
-	return protection;
 }
 
 int Hero::Fight(Hero hero, Enemy enemy)
 {
 		int result;
-		int loss = enemy.setEnemy(). - a.my_armor.protection - a.my_shield.protection;
-		int attack = a.strength * a.my_weapon.damage;
-		int hp_hero = a.hp;
-		int hp_enemy = b.hp;
+		int loss = enemy.getDamage(enemy) - hero.shield.getProtectionShield(hero.shield) - hero.armor.getProtectionArmor(hero.armor);
+		int attack = hero.strength * hero.weapon.getDamage(hero.weapon);
+		int hp_hero = hero.hp;
+		int hp_enemy = enemy.getHP(enemy);
 		do
 		{
 			if (loss > 0)
@@ -84,6 +71,7 @@ int Hero::Fight(Hero hero, Enemy enemy)
 		return result;
 }
 
+/*
 hero InitHero(string a, int b, int c) //Инициализируем героя
 {
 	hero h;
@@ -109,7 +97,7 @@ hero InputHero(armor* b, weapon* c, shield* d) // Ввод переменной
 	cin >> a.hp;
 	return a;
 }
-void OutputHero(hero b)/*функция вывода переменной*/
+void OutputHero(hero b)
 {
 	cout << "Имя: ";
 	cout << b.name << endl;
@@ -120,7 +108,6 @@ void OutputHero(hero b)/*функция вывода переменной*/
 	cout << "Защита: ";
 	cout << b.my_armor.protection+b.my_shield.protection << endl;
 }
-
 int Fight(hero a, enemy b) // Функция сражения
 {
 	int result;
@@ -142,3 +129,4 @@ int Fight(hero a, enemy b) // Функция сражения
 		result = 0;
 	return result;
 }
+*/

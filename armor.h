@@ -8,8 +8,8 @@ class Armor
 {
 public:
 	Armor initializeArmor(string name, int protection, int type);
-	Armor setArmor();
-	void getArmor(Armor armor);
+	Armor inputArmor();
+	void outputArmor(Armor armor);
 	int getProtectionArmor(Armor armor);
 private:
 	string name;
