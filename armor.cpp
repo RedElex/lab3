@@ -7,7 +7,7 @@
 
 using namespace std;
 
-Armor Armor::initializeArmor(string name, int protection, int type)
+Armor Armor::initializeArmor(string name, int protection, int type) // Инициализация
 {
 	Armor armor;
 	armor.name = name;
@@ -16,7 +16,7 @@ Armor Armor::initializeArmor(string name, int protection, int type)
 	return armor;
 }
 
-Armor Armor::inputArmor()
+Armor Armor::inputArmor() // Ввод
 {
 	Armor armor = {};
 	cout << "Выберите название брони: " << endl;
@@ -29,7 +29,7 @@ Armor Armor::inputArmor()
 
 }
 
-void Armor::outputArmor(Armor armor)
+void Armor::outputArmor(Armor armor) // Вывод
 {
 	cout << "Название: ";
 	cout << armor.name << endl;
@@ -40,7 +40,7 @@ void Armor::outputArmor(Armor armor)
 
 }
 
-int Armor::getProtectionArmor(Armor armor)
+int Armor::getProtectionArmor(Armor armor) // Получение protection
 {
 	int protection = armor.protection;
 	return protection;

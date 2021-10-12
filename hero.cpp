@@ -11,7 +11,7 @@
 
 using namespace std;
 
-Hero Hero::initializeHero(string name, int strength, int hp)
+Hero Hero::initializeHero(string name, int strength, int hp) // Инициализация
 {
 	Hero hero;
 	hero.armor = {};
@@ -24,7 +24,7 @@ Hero Hero::initializeHero(string name, int strength, int hp)
 
 }
 
-Hero Hero::inputHero(Armor armor, Weapon weapon, Shield shield)
+Hero Hero::inputHero(Armor armor, Weapon weapon, Shield shield) // Ввод
 {
 	Hero hero = {};
 	hero.armor = armor;
@@ -39,7 +39,7 @@ Hero Hero::inputHero(Armor armor, Weapon weapon, Shield shield)
 	return hero;
 }
 
-void Hero::outputHero(Hero hero)
+void Hero::outputHero(Hero hero) // Вывод
 {
 	cout << "Имя: ";
 	cout << hero.name << endl;
@@ -49,7 +49,7 @@ void Hero::outputHero(Hero hero)
 	cout << hero.hp << endl;
 }
 
-int Hero::Fight(Hero hero, Enemy enemy)
+int Hero::Fight(Hero hero, Enemy enemy) // Вычисление 
 {
 		int result;
 		int loss = enemy.getDamage(enemy) - hero.shield.getProtectionShield(hero.shield) - hero.armor.getProtectionArmor(hero.armor);

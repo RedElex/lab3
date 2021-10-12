@@ -7,7 +7,7 @@
 
 using namespace std;
 
-Enemy Enemy::initializeEnemy(string name, int damage, int hp)
+Enemy Enemy::initializeEnemy(string name, int damage, int hp) // Инициализация
 {
 	Enemy enemy;
 	enemy.name = name;
@@ -16,7 +16,7 @@ Enemy Enemy::initializeEnemy(string name, int damage, int hp)
 	return enemy;
 }
 
-Enemy Enemy::inputEnemy()
+Enemy Enemy::inputEnemy() // Ввод
 {
 	Enemy enemy = {};
 	cout << "Выберите имя врага: " << endl;
@@ -29,7 +29,7 @@ Enemy Enemy::inputEnemy()
 
 }
 
-void Enemy::outputEnemy(Enemy enemy)
+void Enemy::outputEnemy(Enemy enemy) // Вывод
 {
 	cout << "Имя: ";
 	cout << enemy.name << endl;
@@ -40,12 +40,12 @@ void Enemy::outputEnemy(Enemy enemy)
 
 }
 
-int Enemy::getDamage(Enemy enemy)
+int Enemy::getDamage(Enemy enemy) // получение damage
 {
 	int damage = enemy.damage;
 	return damage;
 }
-int Enemy::getHP(Enemy enemy)
+int Enemy::getHP(Enemy enemy) // получение hp
 {
 	int hp = enemy.hp;
 	return hp;

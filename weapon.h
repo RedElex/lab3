@@ -7,10 +7,10 @@ using namespace std;
 class Weapon
 {
 public:
-	Weapon initializeWeapon(string name, int damage, int type);
-	Weapon inputWeapon();
-	void outputWeapon(Weapon weapon);
-	int getDamage(Weapon weapon);
+	Weapon initializeWeapon(string name, int damage, int type); // Инициализацция
+	Weapon inputWeapon(); // Ввод
+	void outputWeapon(Weapon weapon); // Вывод
+	int getDamage(Weapon weapon); // Получение damage
 private:
 	string name;
 	int damage;

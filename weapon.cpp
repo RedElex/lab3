@@ -7,7 +7,7 @@
 
 using namespace std;
 
-Weapon Weapon::initializeWeapon(string name, int damage, int type)
+Weapon Weapon::initializeWeapon(string name, int damage, int type) // Инициализация
 {
 	Weapon weapon;
 	weapon.name = name;
@@ -16,7 +16,7 @@ Weapon Weapon::initializeWeapon(string name, int damage, int type)
 	return weapon;
 
 }
-Weapon Weapon::inputWeapon()
+Weapon Weapon::inputWeapon() // Ввод
 {
 	Weapon weapon = {};
 	cout << "Выберите название оружия: " << endl;
@@ -30,7 +30,7 @@ Weapon Weapon::inputWeapon()
 	} while (weapon.type < 1 || weapon.type>3);
 	return weapon;
 }
-void Weapon::outputWeapon(Weapon weapon)
+void Weapon::outputWeapon(Weapon weapon) // Вывод
 {
 	cout << "Название: ";
 	cout << weapon.name << endl;
@@ -54,7 +54,7 @@ void Weapon::outputWeapon(Weapon weapon)
 	}
 
 }
-int Weapon::getDamage(Weapon weapon)
+int Weapon::getDamage(Weapon weapon) // получение damage
 {
 	int damage = weapon.damage;
 	return damage;

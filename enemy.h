@@ -7,11 +7,11 @@ using namespace std;
 class Enemy
 {
 public:
-	Enemy initializeEnemy(string name, int damage, int hp);
-	Enemy inputEnemy();
-	void outputEnemy(Enemy enemy);
-	int getDamage(Enemy enemy);
-	int getHP(Enemy enemy);
+	Enemy initializeEnemy(string name, int damage, int hp);// Инициализация
+	Enemy inputEnemy(); // Ввод
+	void outputEnemy(Enemy enemy); // Вывод
+	int getDamage(Enemy enemy); // Получение damage
+	int getHP(Enemy enemy); // Получение hp
 private:
 	string name;
 	int damage;

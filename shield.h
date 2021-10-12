@@ -7,10 +7,10 @@ using namespace std;
 class Shield
 {
 public:
-	Shield initializeShield(string name, int protection, int type);
-	Shield inputShield();
-	void outputShield(Shield shield);
-	int getProtectionShield(Shield shield);
+	Shield initializeShield(string name, int protection, int type); // Инициализация 
+	Shield inputShield(); // Ввод 
+	void outputShield(Shield shield); // Вывод
+	int getProtectionShield(Shield shield); // Получение protection
 private:
 	string name;
 	int protection;

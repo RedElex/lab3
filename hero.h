@@ -10,10 +10,10 @@ using namespace std;
 class Hero
 {
 public:
-	Hero initializeHero(string name, int strenght, int hp);
-	Hero inputHero(Armor armor, Weapon weapon, Shield shield);
-	void outputHero(Hero hero);
-	int Fight(Hero hero, Enemy enemy);
+	Hero initializeHero(string name, int strenght, int hp); // Инициализация
+	Hero inputHero(Armor armor, Weapon weapon, Shield shield); // Ввод
+	void outputHero(Hero hero); // Вывод
+	int Fight(Hero hero, Enemy enemy); // Вычисление
 private:
 	string name;
 	int strength;

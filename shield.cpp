@@ -7,7 +7,7 @@
 
 using namespace std;
 
-Shield Shield::initializeShield(string name, int protection, int type)
+Shield Shield::initializeShield(string name, int protection, int type) // Инициализация
 {
 	Shield shield;
 	shield.name = name;
@@ -16,7 +16,7 @@ Shield Shield::initializeShield(string name, int protection, int type)
 	return shield;
 }
 
-Shield Shield::inputShield()
+Shield Shield::inputShield() // Ввод
 {
 	Shield shield = {};
 	cout << "Выберите название щита: " << endl;
@@ -28,7 +28,7 @@ Shield Shield::inputShield()
 	return shield;
 }
 
-void Shield::outputShield(Shield shield)
+void Shield::outputShield(Shield shield) // Вывод
 {
 	cout << "Название: ";
 	cout << shield.name << endl;
@@ -38,7 +38,7 @@ void Shield::outputShield(Shield shield)
 	cout << shield.type << endl;
 
 }
-int Shield::getProtectionShield(Shield shield)
+int Shield::getProtectionShield(Shield shield) // Получение protection
 {
 	int protection = shield.protection;
 	return protection;
