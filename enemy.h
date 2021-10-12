@@ -18,15 +18,3 @@ private:
 	int hp;
 };
 
-
-/*
-typedef struct
-{
-	string name;
-	int damage;
-	int hp;
-} enemy;
-enemy InitEnemy(string a, int b, int c); //Инициализация врага
-enemy InputEnemy(); // Ввод врага
-void OutputEnemy(enemy b); // Вывод врага
-*/

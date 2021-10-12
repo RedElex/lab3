@@ -18,15 +18,3 @@ private:
 };
 
 
-/*
-typedef struct
-{
-	string name;
-	int protection;
-	int type;
-} armor;
-
-armor InitArmor(string a, int b, int c); // Инициализация брони
-armor InputArmor(); // Ввод брони
-void OutputArmor(armor b); // Вывод брони
-*/
